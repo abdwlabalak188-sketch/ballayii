@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BALLAYII - Global Search</title>
+<style>
+body{margin:0;background:#080808;color:white;font-family:Arial,sans-serif;text-align:center;padding:40px 15px}
+h1{color:#d9ad45;font-size:48px;letter-spacing:5px}
+p{color:#bbb}
+input{width:65%;max-width:450px;padding:15px;border:1px solid #d9ad45;border-radius:10px;background:#171717;color:white;font-size:16px}
+button{padding:15px;background:#d9ad45;border:0;border-radius:10px;font-weight:bold}
+a{color:#e4bd61}
+.links{margin:30px auto;line-height:3}
+footer{margin-top:100px;color:#d9ad45}
+</style>
+</head>
+<body>
+<h1>BALLAYII</h1>
+<p>گەڕان لە جیهانی زانیاری</p>
 
+<input id="q" placeholder="چی دەگەڕێیت؟">
+<button onclick="search()">گەڕان</button>
+
+<div class="links">
+<a href="https://www.google.com" target="_blank">Google</a> |
+<a href="https://www.wikipedia.org" target="_blank">Wikipedia</a> |
+<a href="https://www.youtube.com" target="_blank">Videos</a> |
+<a href="https://images.google.com" target="_blank">Images</a> |
+<a href="https://maps.google.com" target="_blank">Maps</a>
+</div>
+
+<div id="results"></div>
+
+<footer>دروستکراوە لەلایەن ABDULLAH</footer>
+
+<script>
+function search(){
+ const q=document.getElementById('q').value.trim();
+ if(!q)return;
+ document.getElementById('results').innerHTML=
+ '<p>ئەنجامی گەڕان:</p><a target="_blank" href="https://www.google.com/search?q='+encodeURIComponent(q)+'">گەڕان لە Google بکە</a>';
+}
+</script>
+</body>
+</html>
